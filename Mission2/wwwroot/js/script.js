@@ -1,4 +1,5 @@
 ﻿$("#calc").click(function calculategrade() {
+    //Define variables, get them using jquery
     let assignment = $("#assignments").val();
     let group = $("#groups").val();
     let quiz = $("#quizzes").val();
@@ -11,9 +12,10 @@
     let intexw = intex * .1;
     let lettergrade = ''
 
+    //Totaling the variables
     let totalp = assignmentw + groupw + quizw + examw + intexw;
-  
 
+    //Determine Letter Grade
     if (totalp >= 94) {
         lettergrade = "A";
     }
@@ -51,5 +53,7 @@
         lettergrade = "E";
     }
 
+    //Alert calculation
     alert("Total Percentage: " + totalp + "\n" + "Letter Grade: " + lettergrade);
+
 });
